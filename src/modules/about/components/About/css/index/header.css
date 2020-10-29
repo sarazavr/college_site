@@ -1,0 +1,239 @@
+.header-top-social {
+	text-align: center;
+	padding: 35px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	line-height: 2;
+
+	background-color: #2d3092;
+}
+
+.header-top-social i {
+	color: white;
+}
+
+.header-top-social a {
+	color: white;
+	font-size: 1rem;
+	color: black;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+.header-top-social i:hover { transform: rotateY(3.142rad); }
+.header-top-social i:hover,
+.header-top-social i:not(:hover) { transition: 0.3s; }
+
+.header-top-info li {
+	display: inline;
+	margin-right: 50px;
+}
+
+.header-top-info li a {
+	text-decoration: none;
+	color: #86878a;
+}
+
+.header-top-info li a:hover { color: #030431; }
+
+
+/* STICKY HEADER */
+/*header { background-color: white; }*/
+
+/*.sticky-header-opacity { opacity: 0; }*/
+
+/*.sticky-header {
+	transition: 0.4s linear;
+	opacity: 1;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	box-shadow: 0 10px 15px rgba(25,25,25,0.1)
+}*/
+
+/*header { overflow-y:scroll; overflow-x:hidden; }*/
+
+/*box-shadow: 0 10px 15px rgba(25,25,25,0.1);*/ /* SHADOW BENEATH HEADER */
+
+/*.sticky-header + main {
+	margin-top: 55px;
+}*/
+
+
+/* HEADER BOTTOM */
+
+.header-bottom {
+	font-weight: 700;
+}
+
+.header-logo {
+	text-align: center;
+	line-height: 2;
+
+	padding: 35px;
+	background-color: #F4F4F4;
+}
+
+.header-logo a, .burger-logo a {
+	text-decoration: none;
+	color: #030431;
+	white-space: nowrap;
+	font-size: 1.5rem;
+}
+
+/* BURGER MENU */
+
+.burger-menu ul {
+	height: 100%;
+	margin: 0; padding: 0;
+}
+
+.burger-menu ul li {
+	height: 100%;
+	display: inline-block;
+	font-weight: 600;
+	font-size: 1.3rem;
+	color: black;
+	line-height: 2.2;
+}
+
+.burger-menu ul li a {
+	text-align: left;
+	padding-left: 16px;
+	padding-bottom: 5px;
+	padding-top: 5px;
+}
+
+.burger-menu ul a {
+	display: block;
+	padding: 35px 35px;
+	text-decoration: none;
+	color: black;
+}
+
+.burger-menu ul {
+	padding-left: 3%;
+	padding-right: 3%;
+}
+
+.burger-menu ul a:hover { color: #2d3092; }
+
+.burger-menu input:checked ~ ul { display: block; }
+
+
+/* BURGER ICON */
+
+.burger-icon {
+	float: right;
+	margin: 1em;
+	width: 40px;
+}
+
+.burger-icon span {
+	background-color: #2d3092;
+	border-radius: 3px;
+	display: block;
+	width: 40px;
+	height: 5px;
+	margin: 7px 0;
+	transition: all .2s ease-in-out;
+}
+
+/* BURGER LOGO */
+
+.burger-logo {
+	padding-top: 25px;
+}
+
+.burger-logo a {
+	margin-top: 30px;
+	margin-left: 30px;
+}
+
+
+/* DROPDOWN GENERAL */
+.mobile-dropdown label:hover, .dropdown-button { cursor: pointer; }
+
+/* DROPDOWN */
+
+.dropdown {
+	height: 100%;
+}
+
+.dropdown .dropdown-button { /* Fix this */
+	height: 100%;
+	padding: 35px 35px;
+	font-size: 16px;
+}
+
+.dropdown .dropdown-content {
+	visibility: hidden;
+	opacity: 0;
+	border-top: 5px solid #2d3092;
+	position: absolute;
+	background-color: #f1f1f1;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+}
+
+.dropdown .dropdown-content a {
+	display: block;
+
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 25px;
+	padding-right: 25px;
+}
+
+
+/* MOBILE DROPDOWN */
+.mobile-dropdown a { font-weight: normal; }
+
+.mobile-dropdown .dropdown-content {
+	visibility: hidden;
+	opacity: 0;
+	height: 0;
+}
+
+.mobile-dropdown .dropdown-content a {
+	text-align: left;
+	padding-left: 5%;
+}
+
+.mobile-dropdown .dropdown-button {
+	padding: 16px;
+	font-size: 16px
+}
+
+.mobile-dropdown .dropdown-button {
+	text-align: left;
+	padding-bottom: 5px;
+	padding-top: 5px;
+}
+
+.mobile-dropdown .dropdown-content a {  padding-top: 0; }
+
+.dropdown-button .is-desktop, .dropdown-button .is-mobile {
+	font-weight: 600;
+	font-size: 1.3rem;
+}
+
+.mobile-dropdown .dropdown-button .is-mobile i {
+	float: right;
+	margin-top: 15px;
+}
+
+.mobile-dropdown input { display: none; }
+
+.mobile-dropdown input:checked ~ .dropdown-content {
+	transition: 0.4s;
+	visibility: visible;
+	opacity: 1;
+	height: auto;
+}
+
+.mobile-dropdown label:hover { color: #2d3092; }
+
+.mobile-dropdown input:checked ~ label i { transform: rotate(90deg); }
+.mobile-dropdown input:checked ~ label { color: #2d3092; }

@@ -1,0 +1,100 @@
+.hero-courses {
+	min-height: 750px; /* useless */
+	margin-bottom: 30px;
+	margin-top: 60px;
+}
+
+/* HERO HEAD */
+
+.hero-courses .hero-head {
+	text-align: center;
+}
+
+.hero-courses .hero-head small {
+	color: #3ba0ff;
+	font-weight: 500;
+	font-size: 16px;
+}
+
+.hero-courses .hero-head .title {
+	font-weight: 600;
+	color: #030431;
+}
+
+/* HERO BODY */
+
+.hero-courses .hero-body {
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+.hero-courses .hero-body section .wrapper {
+	min-height: 480px;
+	border: 1px solid #ddd;
+	margin: 20px;
+	padding: 45px;
+}
+
+.hero-courses .hero-body section .wrapper:hover { background: #2d3092; }
+.hero-courses .hero-body section .wrapper:hover,
+.hero-courses .hero-body section .wrapper:not(:hover) { transition: 0.2s linear; }
+
+.hero-courses .hero-body section .wrapper:hover .icon,
+.hero-courses .hero-body section .wrapper:hover .title a,
+.hero-courses .hero-body section .wrapper:hover .description,
+.hero-courses .hero-body section .wrapper:hover .read-more {
+	color: white;
+}
+
+.hero-courses .hero-body section .wrapper .description {
+	/*letter-spacing: 0.5px;*/ /* 0.5? */
+}
+
+.hero-courses .hero-body section .wrapper .description, .hero-courses .hero-body section .wrapper .read-more {
+	line-height: 30px;
+	color: #57667e;
+}
+
+.hero-courses .hero-body section .wrapper .read-more {
+	text-decoration: none;
+	font-weight: 401;
+}
+
+.hero-courses .hero-body section .wrapper .icon {
+	color: #2d3092;
+	font-size: 55px;
+}
+
+.hero-courses .hero-body section .wrapper .title {
+	margin: 0;
+	line-height: 0.8;
+}
+
+.hero-courses .hero-body section .wrapper .title a {
+	text-decoration: none;
+	font-size: 24px;
+	font-weight: 700;
+	color: #250051;
+}
+
+
+/* FIND MORE BUTTON */
+
+.hero-courses .find-more-button-wrapper {
+	text-align: center;
+	margin-top: 55px;
+	margin-bottom: 70px;
+}
+
+.hero-courses .find-more-button-wrapper a {
+	text-decoration: none;
+	color: white;
+	background: #2d3092;
+	padding: 20px 40px;
+	letter-spacing: 1px;
+	font-weight: 405;
+}
+
+.hero-courses .find-more-button-wrapper a:hover { opacity: 0.9; }
+.hero-courses .find-more-button-wrapper a:hover,
+.hero-courses .find-more-button-wrapper a:not(:hover) { transition: 0.2s; }

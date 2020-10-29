@@ -1,0 +1,10 @@
+.hero-latest-news-title {
+	background: #2d3092;
+	padding: 20px;
+}
+
+.hero-latest-news-title .title {
+	text-align: center;
+	color: white;
+	font-weight: 600;
+}

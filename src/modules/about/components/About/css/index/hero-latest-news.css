@@ -1,0 +1,68 @@
+/* HERO BODY */
+.hero-latest-news .hero-body {
+	margin-top: 30px;
+	margin-bottom: 30px;
+
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+.hero-latest-news .hero-body section .wrapper {
+	margin: 20px;
+	border: 1px solid #ddd;
+}
+
+.hero-latest-news .hero-body section .wrapper .article-head img {
+	width: 100%;
+	border-bottom: 1px inset #ddd;
+}
+
+.hero-latest-news .hero-body section .wrapper .article-head {
+	position: relative;
+}
+
+.hero-latest-news .hero-body section .wrapper .article-head .date {
+	background: #2d3092;
+	position: absolute;
+	width: 70px;
+	height: 70px;
+	bottom: 5px;
+	text-align: center;
+	padding-top: 10px;
+	color: white;
+}
+
+.hero-latest-news .hero-body section .wrapper .article-head .date .day {
+	font-weight: 600;
+	font-size: 22px;
+}
+
+.hero-latest-news .hero-body section .wrapper .article-head .date .month {}
+
+.hero-latest-news .hero-body section .wrapper .article-body h2 {
+	padding-left: 25px;
+	padding-right: 25px;
+}
+
+.hero-latest-news .hero-body section .wrapper .article-body h2 a {
+	font-weight: 700;
+	line-height: 1.4;
+	font-size: 19px;
+	color: #191d34;
+	text-decoration: none;
+}
+
+.hero-latest-news .hero-body section .wrapper .article-body h2 a:hover { color: #2d3092; }
+
+.hero-latest-news .hero-body section .wrapper .article-body .read-more {
+	display: block;
+	margin-bottom: 20px;
+	margin-left: 25px;
+	text-decoration: none;
+	color: #3a3a3a;
+	width: min-content;
+	white-space: nowrap;
+	font-weight: 401;
+}
+
+.hero-latest-news .hero-body section .wrapper .article-body .read-more:hover { color: #014b85; }

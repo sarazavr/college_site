@@ -1,0 +1,12 @@
+@import url('../generic/grid.css');
+@import url('header.css');
+@import url('scroll-to-top-button.css');
+@import url('first-hero.css');
+@import url('hero-latest-news-title.css');
+@import url('hero-latest-news.css');
+@import url('hero-courses.css');
+@import url('footer.css');
+@import url('media-queries.css');
+
+html { scrollbar-width: none; } ::-webkit-scrollbar { display: none; }
+body { font-family: 'Montserrat', sans-serif; }

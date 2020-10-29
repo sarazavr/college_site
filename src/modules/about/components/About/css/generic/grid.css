@@ -1,0 +1,167 @@
+html, body {
+	margin: 0;
+}
+
+*, *:after, *:before {
+	box-sizing: border-box;
+}
+
+.container {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+/*[class*='col-'] {
+	padding: 10px;
+}*/
+
+/** { border: 1px solid; }*/
+
+
+/* COLUMNS */
+
+.col-1 { width: calc(100% / 12); }
+
+.col-2 { width: calc(100% / 12  * 2); }
+
+.col-3 { width: calc(100% / 12 * 3); }
+
+.col-4 { width: calc(100% / 12  * 4); }
+
+.col-5 { width: calc(100% / 12  * 5); }
+
+.col-6 { width: calc(100% / 12  * 6); }
+
+.col-7 { width: calc(100% / 12  * 7); }
+
+.col-8 { width: calc(100% / 12  * 8); }
+
+.col-9 { width: calc(100% / 12 * 9); }
+
+.col-10 { width: calc(100% / 12  * 10); }
+
+.col-11 { width: calc(100% / 12  * 11); }
+
+.col-12 { width: 100%; }
+
+
+/* OFFSETS */
+
+.offset-1 { margin-left: calc(100% / 12); }
+.offset-2 { margin-left: calc(100% / 12 * 2); }
+.offset-3 { margin-left: calc(100% / 12 * 3); }
+.offset-4 { margin-left: calc(100% / 12 * 4); }
+.offset-5 { margin-left: calc(100% / 12 * 5); }
+.offset-6 { margin-left: calc(100% / 12 * 6); }
+.offset-7 { margin-left: calc(100% / 12 * 7); }
+.offset-8 { margin-left: calc(100% / 12 * 8); }
+.offset-9 { margin-left: calc(100% / 12 * 9); }
+.offset-10 { margin-left: calc(100% / 12 * 10); }
+.offset-11 { margin-left: calc(100% / 12 * 11); }
+
+
+/* OTHER (TODO: fix this) */
+
+.hide-desktop {
+	display: none;
+}
+
+.hide-tablet, .hide-mobile {
+	display: block;
+}
+
+
+/* ON TABLET */
+@media only screen and (max-width: 1281px) {
+	.col-1-tablet { width: calc(100% / 12); }
+
+	.col-2-tablet { width: calc(100% / 12  * 2); }
+
+	.col-3-tablet { width: calc(100% / 12 * 3); }
+
+	.col-4-tablet { width: calc(100% / 12  * 4); }
+
+	.col-5-tablet { width: calc(100% / 12  * 5); }
+
+	.col-6-tablet { width: calc(100% / 12  * 6); }
+
+	.col-7-tablet { width: calc(100% / 12  * 7); }
+
+	.col-8-tablet { width: calc(100% / 12  * 8); }
+
+	.col-9-tablet { width: calc(100% / 12 * 9); }
+
+	.col-10-tablet { width: calc(100% / 12  * 10); }
+
+	.col-11-tablet { width: calc(100% / 12  * 11); }
+
+	.col-12-tablet { width: 100%; }
+
+	.offset-1-tablet { margin-left: calc(100% / 12); }
+	.offset-2-tablet { margin-left: calc(100% / 12 * 2); }
+	.offset-3-tablet { margin-left: calc(100% / 12 * 3); }
+	.offset-4-tablet { margin-left: calc(100% / 12 * 4); }
+	.offset-5-tablet { margin-left: calc(100% / 12 * 5); }
+	.offset-6-tablet { margin-left: calc(100% / 12 * 6); }
+	.offset-7-tablet { margin-left: calc(100% / 12 * 7); }
+	.offset-8-tablet { margin-left: calc(100% / 12 * 8); }
+	.offset-9-tablet { margin-left: calc(100% / 12 * 9); }
+	.offset-10-tablet { margin-left: calc(100% / 12 * 10); }
+	.offset-11-tablet { margin-left: calc(100% / 12 * 11); }
+
+	.hide-tablet {
+		display: none;
+	}
+
+	.hide-desktop, .hide-mobile {
+		display: block;
+	}
+}
+
+
+/* ON MOBILE */
+@media only screen and (max-width: 700px) { /* 480px */
+	.col-1-mobile { width: calc(100% / 12); }
+
+	.col-2-mobile { width: calc(100% / 12  * 2); }
+
+	.col-3-mobile { width: calc(100% / 12 * 3); }
+
+	.col-4-mobile { width: calc(100% / 12  * 4); }
+
+	.col-5-mobile { width: calc(100% / 12  * 5); }
+
+	.col-6-mobile { width: calc(100% / 12  * 6); }
+
+	.col-7-mobile { width: calc(100% / 12  * 7); }
+
+	.col-8-mobile { width: calc(100% / 12  * 8); }
+
+	.col-9-mobile { width: calc(100% / 12 * 9); }
+
+	.col-10-mobile { width: calc(100% / 12  * 10); }
+
+	.col-11-mobile { width: calc(100% / 12  * 11); }
+
+	.col-12-mobile { width: 100%; }
+
+	.offset-1-mobile { margin-left: calc(100% / 12); }
+	.offset-2-mobile { margin-left: calc(100% / 12 * 2); }
+	.offset-3-mobile { margin-left: calc(100% / 12 * 3); }
+	.offset-4-mobile { margin-left: calc(100% / 12 * 4); }
+	.offset-5-mobile { margin-left: calc(100% / 12 * 5); }
+	.offset-6-mobile { margin-left: calc(100% / 12 * 6); }
+	.offset-7-mobile { margin-left: calc(100% / 12 * 7); }
+	.offset-8-mobile { margin-left: calc(100% / 12 * 8); }
+	.offset-9-mobile { margin-left: calc(100% / 12 * 9); }
+	.offset-10-mobile { margin-left: calc(100% / 12 * 10); }
+	.offset-11-mobile { margin-left: calc(100% / 12 * 11); }
+
+	.hide-mobile {
+		display: none;
+	}
+
+	.hide-tablet, .hide-desktop {
+		display: block;
+	}
+}
