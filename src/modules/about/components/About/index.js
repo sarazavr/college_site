@@ -11,7 +11,9 @@ export function About() {
          <a className="scroll-to-top-button" href="#" aria-hidden="true">
 			<i className="fas fa-level-up-alt"></i>
 		</a>
+
         <Header />
+        
         <Main />
         <Footer />
         </>
