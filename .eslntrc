@@ -1,0 +1,69 @@
+{
+    "extends": [
+        "airbnb",
+        "plugin:prettier/recommended",
+        "prettier/react"
+    ],
+
+    "parser": "babel-eslint",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "legacyDecorators": true
+        }
+    },
+
+    "rules": {
+        "class-methods-use-this": "off",
+        "import/no-extraneous-dependencies": "off",
+        "import/prefer-default-export": "off",
+        "import/no-cycle": "off",
+        "jsx-a11y/alt-text": "off",
+        "jsx-a11y/click-events-have-key-events": "off",
+        "jsx-a11y/href-no-hash": "off",
+        "jsx-a11y/label-has-associated-control": "off",
+        "jsx-a11y/label-has-for": "off",
+        "jsx-a11y/no-noninteractive-tabindex": "warn",
+        "jsx-a11y/no-static-element-interactions": "off",
+        "lines-between-class-members": "warn",
+        "no-continue": "off",
+        "no-nested-ternary": "off",
+        "no-param-reassign": ["error", {
+            "props": true,
+            "ignorePropertyModificationsFor": ["acc"]
+        }],
+        "no-plusplus": "off",
+        "prefer-destructuring": "off",
+        "prefer-template": "warn",
+        "react/no-trailing-spaces": "off",
+        "react/destructuring-assignment": "off",
+        "react/forbid-prop-types": ["warn", { "forbid": ["any", "array"] }],
+        "react/no-unused-state": "warn",
+        "react/require-default-props": "off",
+        "react/jsx-curly-brace-presence": "warn",
+        "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx"] }],
+        "react/prefer-stateless-function": "warn",
+        "yoda": "warn",
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "warn"
+    },
+
+    "env": {
+        "browser": true,
+        "node": true,
+        "mocha": true,
+        "es6": true
+    },
+
+    "settings": {
+        "import/resolver": { "webpack": { "config": { "resolve": { "modules": ["src", "node_modules"] } } } }
+    },
+
+    "globals": {
+        "$": true,
+        "ga": true,
+        "l": true,
+        "fmNl": true,
+        "sprintf": true,
+        "fixture": true
+    }
+}
