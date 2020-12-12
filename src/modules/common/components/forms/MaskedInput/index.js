@@ -3,11 +3,17 @@ import InputMask from 'react-input-mask';
 import InputText from '../InputText';
 
 export default function MaskedInput({mask, onChange, value, onBlur, ...rest}) {
-    return (
+//   const handleChange = ({ target: { value } }) => {
+//     onChange(value);
+// };  
+const handleChange = (value) => {
+   onChange(value);
+ };  
+  return (
         <InputMask
     mask= {mask}
     value={value}
-    onChange={onChange}
+    onChange={handleChange}
     onBlur={onBlur}
   >
     {() => (

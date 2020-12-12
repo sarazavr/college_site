@@ -6,7 +6,7 @@ export function Main() {
         <div className="overlay">
             <article className="hero-1">
                 <div>
-                    <img className="slide" src="img/about/edu-bg.jpg" />
+                    <img className="slide" src="img/about/main.jpg" />
                 </div>
                 <small className="subtitle">Державний вищий навчальний заклад</small>
                 <h1 className="title">

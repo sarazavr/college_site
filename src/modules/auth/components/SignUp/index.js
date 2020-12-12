@@ -8,7 +8,7 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import {Field, withFormik} from 'formik';
-import { FormikInput, FormikMaskedInput } from '../../../common/components/forms/formikFields';
+import { FormikInput, FormikMaskedInput, FormikSelect, FormikSwitch } from '../../../common/components/forms/formikFields';
 
 
 
@@ -33,11 +33,14 @@ const useStyles = makeStyles((theme) => ({
 }));
 
  function SignUp( {
-  handleSubmit
+  handleSubmit,
+  groupsOptions,
+  values,
+  ...rest
+  
  }) {
   const classes = useStyles();
 
-  
 
   return (
     <Container component="main" maxWidth="xs">
@@ -50,13 +53,24 @@ const useStyles = makeStyles((theme) => ({
         </Typography>
         <form className={classes.form} noValidate onSubmit={handleSubmit}>
           
+        
+        <Field
+            component = {FormikSwitch}   
+            variant="outlined"
+            required
+            onLabel="Студент"
+            offLabel="Абітурієнт"
+            name='isStudent'
+          />
+        
+        
         <Field
             component = {FormikInput}   
             variant="outlined"
             margin="normal"
             required
             fullWidth
-            name="firstName"
+            name="first_name"
             placeholder= "Ім'я"
             autoFocus
           />
@@ -67,7 +81,7 @@ const useStyles = makeStyles((theme) => ({
             margin="normal"
             required
             fullWidth
-            name="lastName"
+            name="last_name"
             placeholder= "Прізвище"
             autoFocus
           />
@@ -78,7 +92,7 @@ const useStyles = makeStyles((theme) => ({
             margin="normal"
             required
             fullWidth
-            name="surname"
+            name="father_name"
             placeholder= "По-батькові"
             autoFocus
           />
@@ -113,8 +127,8 @@ const useStyles = makeStyles((theme) => ({
         </Field> */}
 
 
-<Field
-            component = {FormikMaskedInput}   
+          <Field
+            component = {FormikInput}   
             variant="outlined"
             margin="normal"
             required
@@ -122,7 +136,7 @@ const useStyles = makeStyles((theme) => ({
             name="phone"
             placeholder='Ваш номер телефону'
             autoFocus
-            mask="(+38) 999 999 99 99" 
+            mask="(+38) 999 999 99 9" 
           />
 
           <Field
@@ -151,6 +165,14 @@ const useStyles = makeStyles((theme) => ({
             placeholder='підтвердіть пароль'
           />
 
+          { values.isStudent && <Field 
+           component = {FormikSelect}
+            label="Група"
+            options= {groupsOptions}
+            required
+            name="group_id"
+          />}
+
 
           <Button
             type="submit"
@@ -174,10 +196,9 @@ const useStyles = makeStyles((theme) => ({
   );
 }
  export default withFormik ({
-  mapPropsToValues: () => ({ email: '', password:'' }),
-  handleSubmit: (values, { setSubmitting }) => {
-    setTimeout(() => {
-      alert(JSON.stringify(values, null, 2));
-    }, 1000);
+  mapPropsToValues: () => ({ phone:'', group_id:'', confirmPassword: '', first_name:'', last_name:'', father_name:'',  email: '', password:'', isStudent: false }),
+  handleSubmit: (values,{props}) => {
+   props.onSubmit (values); 
+  
   },
  }) (SignUp)

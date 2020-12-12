@@ -13,18 +13,6 @@ import Container from '@material-ui/core/Container';
 import {Field, useFormik, withFormik} from 'formik';
 import { FormikInput } from '../../../common/components/forms/formikFields';
 
-function Copyright() {
-  return (
-    <Typography variant="body2" color="textSecondary" align="center">
-      {'Copyright © '}
-      <Link color="inherit" href="https://material-ui.com/">
-        Your Website
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
-}
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -32,6 +20,10 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
+    maxWidth: 300,
+    height: '100%',
+    backgroundColor: 'grey',
+    borderRadius: '20px'
   },
   avatar: {
     margin: theme.spacing(1),
@@ -54,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
   
 
   return (
-    <Container component="main" maxWidth="xs">
+    // <Container component="main" maxWidth="xs">
       <div className={classes.paper}>
         <Avatar className={classes.avatar}>
           <LockOutlinedIcon />
@@ -113,14 +105,12 @@ const useStyles = makeStyles((theme) => ({
           </Grid>
         </form>
       </div>
-    </Container>
+    // </Container>
   );
 }
  export default withFormik ({
   mapPropsToValues: () => ({ email: '', password:'' }),
-  handleSubmit: (values, { setSubmitting }) => {
-    setTimeout(() => {
-      alert(JSON.stringify(values, null, 2));
-    }, 1000);
+  handleSubmit: (values, { props }) => {
+   props.onSubmit (values); 
   },
  }) (SignIn)
